@@ -30,14 +30,42 @@ const team = [
         image: "barbara-ramos-graphic-designer.jpg"
     }
 ]
-let output=document.getElementById('output')
+let outputWrapper=document.getElementById('output-wrapper')
+let row=document.createElement('div')
+row.classList.add('row','g-3')
+outputWrapper.append(row)
+     
 for(let i=0; i<team.length;i++){
+    //!milestone 1
     // console.log(`${team[i].name} ${team[i].role} ${team[i].image}`)
+    //! milestone 2
     // output.innerHTML += `
     // ${team[i].name} ${team[i].role} ${team[i].image}`
-    let newImg =document.createElement('img')
+    //! bonus 1
+    // let newImg =document.createElement('img')
+    // newImg.setAttribute('src', `./img/${team[i].image}`)
+    // output.innerHTML+= `
+    //  ${team[i].name} ${team[i].role} `
+    // output.append(newImg)
+    //! bonus 2
+    let newCell=document.createElement('div')
+    newCell.classList.add('col-4')
+    let newImg=document.createElement('img')
+    newImg.classList.add('card-img-top')
     newImg.setAttribute('src', `./img/${team[i].image}`)
-    output.innerHTML+= `
-     ${team[i].name} ${team[i].role} `
-    output.append(newImg) 
+    let cardBody= document.createElement('div')
+    cardBody.classList.add('card-body')
+    let nameToAdd=document.createElement('h5')
+    nameToAdd.classList.add('card-title')
+    nameToAdd.innerHTML=team[i].name
+    let roleToAdd=document.createElement('p')
+    roleToAdd.classList.add('card-text')
+    roleToAdd.innerHTML=team[i].role
+
+
+    row.append(newCell)
+    newCell.append(newImg)
+    newCell.append(cardBody)
+    cardBody.append(nameToAdd)
+    cardBody.append(roleToAdd)
 }
