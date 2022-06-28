@@ -33,6 +33,11 @@ const team = [
 let output=document.getElementById('output')
 for(let i=0; i<team.length;i++){
     // console.log(`${team[i].name} ${team[i].role} ${team[i].image}`)
-    output.innerHTML += `
-    ${team[i].name} ${team[i].role} ${team[i].image}`
+    // output.innerHTML += `
+    // ${team[i].name} ${team[i].role} ${team[i].image}`
+    let newImg =document.createElement('img')
+    newImg.setAttribute('src', `./img/${team[i].image}`)
+    output.innerHTML+= `
+     ${team[i].name} ${team[i].role} `
+    output.append(newImg) 
 }
