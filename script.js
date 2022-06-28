@@ -30,7 +30,9 @@ const team = [
         image: "barbara-ramos-graphic-designer.jpg"
     }
 ]
-
+let output=document.getElementById('output')
 for(let i=0; i<team.length;i++){
-    console.log(`${team[i].name} ${team[i].role} ${team[i].image}`)
+    // console.log(`${team[i].name} ${team[i].role} ${team[i].image}`)
+    output.innerHTML += `
+    ${team[i].name} ${team[i].role} ${team[i].image}`
 }
