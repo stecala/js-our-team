@@ -51,7 +51,7 @@ for(let i=0; i<team.length;i++){
     let newCell=document.createElement('div')
     newCell.classList.add('col-4')
     let newImg=document.createElement('img')
-    newImg.classList.add('card-img-top')
+    newImg.classList.add('card-img-top', 'rounded-top')
     newImg.setAttribute('src', `./img/${team[i].image}`)
     let cardBody= document.createElement('div')
     cardBody.classList.add('card-body','border','border-secondary', 'px-2', 'bg-white')
