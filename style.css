@@ -1,0 +1,10 @@
+body{
+    background-image: linear-gradient(rgb(255, 115, 208), rgb(255, 255, 155));
+}
+.container-lg .row img{
+    transition: transform .5s ease-in-out;
+}
+.container-lg .row img:hover{
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+}
