@@ -54,7 +54,7 @@ for(let i=0; i<team.length;i++){
     newImg.classList.add('card-img-top')
     newImg.setAttribute('src', `./img/${team[i].image}`)
     let cardBody= document.createElement('div')
-    cardBody.classList.add('card-body')
+    cardBody.classList.add('card-body','border','border-secondary', 'px-2')
     let nameToAdd=document.createElement('h5')
     nameToAdd.classList.add('card-title')
     nameToAdd.innerHTML=team[i].name
